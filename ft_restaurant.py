@@ -45,7 +45,7 @@ def get_restaurant_urls(n_restaurants):
     # search restaurants by button
     try:
         try:
-            button = WebDriverWait(driver, 15).until(
+            button = WebDriverWait(driver, 12).until(
                 EC.presence_of_element_located(
                     (
                         By.XPATH,
@@ -54,7 +54,7 @@ def get_restaurant_urls(n_restaurants):
                 )
             )
         except:
-            button = WebDriverWait(driver, 15).until(
+            button = WebDriverWait(driver, 12).until(
                 EC.presence_of_element_located(
                     (
                         By.XPATH,
@@ -65,9 +65,9 @@ def get_restaurant_urls(n_restaurants):
         button.click()
     except:
         # search restaurants by search box
-        search_box = WebDriverWait(driver, 15).until(
+        search_box = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.NAME, "q"))
-        # //input[@name='q']
+            # //input[@name='q']
         )
         search_box.clear()
         search_box.send_keys("餐廳")
