@@ -23,7 +23,7 @@ def get_restaurant_urls(n_restaurants):
     time.sleep(5)
 
     # search for the location
-    location = input("請輸入所在地址，越詳細越好:")
+    location = input("請輸入所在地址，越詳細越好: ")
     search_box = WebDriverWait(driver, 15).until(
         EC.presence_of_element_located((By.NAME, "q"))
     )
